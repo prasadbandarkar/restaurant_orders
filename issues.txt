@@ -1,0 +1,28 @@
+The column 'Total Products' in the orders file is inconsistent with the quantity column. For example, 
+`orders1.loc[orders1.order_number==647]`  for the first restaurant gives the result:
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>order_number</th>
+      <th>date</th>
+      <th>item_name</th>
+      <th>quantity</th>
+      <th>product_price</th>
+      <th>total_products</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>39151</td>
+      <td>647</td>
+      <td>2015-09-08 17:12:00</td>
+      <td>Onion Bhaji</td>
+      <td>1</td>
+      <td>3.95</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+
+A total of 6878 orders in the first restaurant file and 10927 in the second one have this issue.  I'm assuming the total_products column is the total quantities in an order. Am I getting this definition wrong?
